@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class setMap {
 	
-	static Scanner sc;
+	static Scanner scan;
 	static Set<Persona> conjuntoPersonas;
 	static Map<String,String> diccionarioPersonas;
 	static List<Persona> listaPersonas;
@@ -64,7 +64,7 @@ public class setMap {
 			    busquedaPersonaPorTelefonoAgendaMap();
 			    break;	
 			default:
-			    System.out.println("Opción no válida. Introduzca una opción válida.");
+			    System.out.println("OpciÃ³n no vÃ¡lida. Introduzca una opciÃ³n vÃ¡lida.");
 							
 			}
 		} while(opcion!=0);
@@ -90,16 +90,16 @@ public class setMap {
 		System.out.println("                   _________________________________________");
 		System.out.println();
 		System.out.println("                          1. Listado completo agenda Set ");
-		System.out.println("                          2. Añadir un contacto agenda Set ");
-		System.out.println("                          3. Añadir una lista de contactos agenda Set");
+		System.out.println("                          2. AÃ±adir un contacto agenda Set ");
+		System.out.println("                          3. AÃ±adir una lista de contactos agenda Set");
 		System.out.println("                          4. Eliminar un contacto agenda Set ");
 		System.out.println("                          5. Eliminar todos los contactos agenda Set");
 		System.out.println("                          6. Listado completo agenda Map ");
-		System.out.println("                          7. Añadir un contacto agenda Map ");	
+		System.out.println("                          7. AÃ±adir un contacto agenda Map ");	
 		System.out.println("                          8. Eliminar un contacto agenda Map ");	
-		System.out.println("                          9. Búsqueda de persona por teléfono en agenda Map");		
+		System.out.println("                          9. BÃºsqueda de persona por telÃ©fono en agenda Map");		
 		System.out.println("                          0. Salir del programa");
-		System.out.println("                          Introduzca una opción: ");
+		System.out.println("                          Introduzca una opciÃ³n: ");
 		System.out.println("");
 		
 		
@@ -130,14 +130,14 @@ public class setMap {
 		System.out.println("             ");
 		System.out.println("           ");
 		System.out.println("        ");
-		System.out.println("                         Añadir nuevo contacto: ");
+		System.out.println("                         AÃ±adir nuevo contacto: ");
 		System.out.println("                   ________________________________");
 		System.out.println();
 		System.out.println("                   > Introduzca el nombre: ");
 		String nombre = sc.nextLine();
 		System.out.println("                   > Introduzca los apellidos: ");
 		String apellidos = sc.nextLine();
-		System.out.println("                   > Introduzca el teléfono: ");
+		System.out.println("                   > Introduzca el telÃ©fono: ");
 		String telefono = sc.nextLine();
 		
 		Persona nuevaPersona = new Persona(nombre,apellidos,telefono);
@@ -146,7 +146,7 @@ public class setMap {
 			System.out.println("Esa persona ya existe en la agenda");
 		}else {		
 		   conjuntoPersonas.add(new Persona(nombre,apellidos,telefono));		
-		   System.out.println("Se ha añadido correctamente la persona "+ nuevaPersona.getNombre() +" "+nuevaPersona.getApellidos());
+		   System.out.println("Se ha aÃ±adido correctamente la persona "+ nuevaPersona.getNombre() +" "+nuevaPersona.getApellidos());
 		}
 		
 		
@@ -167,10 +167,10 @@ public class setMap {
 		System.out.println("             ");
 		System.out.println("           ");
 		System.out.println("        ");
-		System.out.println("                         Adición de listado a conjunto  ");
+		System.out.println("                         AdiciÃ³n de listado a conjunto  ");
 		System.out.println("                   _________________________________________");
 		System.out.println();
-		System.out.println("                   Lista de personas añadida a la agenda.");
+		System.out.println("                   Lista de personas aÃ±adida a la agenda.");
 	
 		
         conjuntoPersonas.addAll(listaPersonas);		
@@ -192,7 +192,7 @@ public class setMap {
 		String nombre = sc.nextLine();
 		System.out.println("                   > Introduzca los apellidos: ");
 		String apellidos = sc.nextLine();
-		System.out.println("                   > Introduzca el teléfono: ");
+		System.out.println("                   > Introduzca el telÃ©fono: ");
 		String telefono = sc.nextLine();
 		
 		
@@ -226,7 +226,7 @@ public class setMap {
 			
 			
 		}else {		
-		    System.out.println("La agenda ya está vacía");
+		    System.out.println("La agenda ya estÃ¡ vacÃ­a");
 		}
 			
 		
@@ -260,21 +260,21 @@ public class setMap {
 		System.out.println("             ");
 		System.out.println("           ");
 		System.out.println("        ");
-		System.out.println("                         Añadir nuevo contacto en Agenda Map: ");
+		System.out.println("                         AÃ±adir nuevo contacto en Agenda Map: ");
 		System.out.println("                   ________________________________");
 		System.out.println();
 		System.out.println("                   > Introduzca el nombre COMPLETO de la persona (Apellidos,Nombre) : ");
 		String nombreCompleto = sc.nextLine();		
-		System.out.println("                   > Introduzca el teléfono: ");
+		System.out.println("                   > Introduzca el telÃ©fono: ");
 		String telefono = sc.nextLine();
 		
 		PersonaDiccionario nuevaPersona = new PersonaDiccionario(telefono,nombreCompleto);
 		
 		if(diccionarioPersonas.containsKey(telefono)) {
-			System.out.println("Ese teléfono ya existe en la agenda Map");
+			System.out.println("Ese telÃ©fono ya existe en la agenda Map");
 		}else {		
 		   diccionarioPersonas.put(telefono,nombreCompleto);		
-		   System.out.println("Se ha añadido correctamente la persona "+ nombreCompleto +" --> "+ telefono);
+		   System.out.println("Se ha aÃ±adido correctamente la persona "+ nombreCompleto +" --> "+ telefono);
 		}
 		
 		
@@ -284,17 +284,17 @@ public class setMap {
 	
     public static void eliminarContactoAgendaMap() {
     	
-    	System.out.println("                       ELIMINACIÓN DE PERSONA POR TELÉFONO   ");
+    	System.out.println("                       ELIMINACIÃ“N DE PERSONA POR TELÃ‰FONO   ");
 		System.out.println("                      _____________________________________");
 		System.out.println();
-		System.out.println("                        > Introduzca el número de teléfono: ");
+		System.out.println("                        > Introduzca el nÃºmero de telÃ©fono: ");
 		String telefono = sc.nextLine();
 		
 		if(!diccionarioPersonas.containsKey(telefono)) {
-			System.out.println(" -> Ese teléfono no existe en la agenda");
+			System.out.println(" -> Ese telÃ©fono no existe en la agenda");
 		}else {
 			diccionarioPersonas.remove(telefono);
-			System.out.println("La persona con teléfono " + telefono + " se ha eliminado de la agenda Map");
+			System.out.println("La persona con telÃ©fono " + telefono + " se ha eliminado de la agenda Map");
 		}
 		
     	
@@ -306,14 +306,14 @@ public class setMap {
 	
 	public static void busquedaPersonaPorTelefonoAgendaMap() {
 		
-		System.out.println("                       BÚSQUEDA DE PERSONA POR TELÉFONO   ");
+		System.out.println("                       BÃšSQUEDA DE PERSONA POR TELÃ‰FONO   ");
 		System.out.println("                          ________________________________");
 		System.out.println();
-		System.out.println("                        > Introduzca el número de teléfono: ");
+		System.out.println("                        > Introduzca el nÃºmero de telÃ©fono: ");
 		String telefono = sc.nextLine();
 		
 		if(!diccionarioPersonas.containsKey(telefono)) {
-			System.out.println(" -> Ese teléfono no existe en la agenda");
+			System.out.println(" -> Ese telÃ©fono no existe en la agenda");
 		}else {
 			System.out.println(" RESULTADO: " + telefono + " --> " + diccionarioPersonas.get(telefono));
 		}
